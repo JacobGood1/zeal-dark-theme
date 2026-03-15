@@ -104,6 +104,12 @@ ZealDarkMode class >> deactivate [
 	^ 'Light mode restored'
 ]
 
+{ #category : 'initialization' }
+ZealDarkMode class >> initialize [
+	"Called automatically when the package is loaded"
+	self activate
+]
+
 { #category : 'patching' }
 ZealDarkMode class >> patchAptitudes [
 	"Patch core aptitudes that hardcode Color white to use theme colors instead"
