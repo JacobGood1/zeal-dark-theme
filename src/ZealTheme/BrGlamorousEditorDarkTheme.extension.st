@@ -10,7 +10,7 @@ BrGlamorousEditorDarkTheme >> initializeConstants [
 	super initializeConstants.
 	
 	"Variables"
-	self constantAt: #pharoDeclaredVariableForeground put: (Color fromHexString: '#2196F3').
+	self constantAt: #pharoDeclaredVariableForeground put: (Color fromHexString: '#64B5F6').
 	self constantAt: #pharoUndeclaredVariableForeground put: (Color fromHexString: '#F44336').
 	self constantAt: #pharoSelfVariableForeground put: (Color fromHexString: '#00BCD4').
 	self constantAt: #pharoSuperVariableForeground put: (Color fromHexString: '#00BCD4').
