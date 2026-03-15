@@ -20,5 +20,5 @@ GtPhlowBasicViewsToolContentElement >> buildToolLabel [
 		padding: (BlInsets all: 5);
 		hMatchParent;
 		vFitContent;
-		background: (Color fromHexString: '#262626')
+		background: ZealDarkMode contentBackground
 ]

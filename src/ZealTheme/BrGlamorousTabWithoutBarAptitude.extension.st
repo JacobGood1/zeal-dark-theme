@@ -3,7 +3,7 @@ Extension { #name : 'BrGlamorousTabWithoutBarAptitude' }
 { #category : '*ZealTheme' }
 BrGlamorousTabWithoutBarAptitude >> initialize [
 	super initialize.
-	self add: (BrGlamorousTextLabelAptitude new foreground: (Color white alpha: 0.85)).
+	self add: (BrGlamorousTextLabelAptitude new foreground: ZealDarkMode textColor).
 	self add: BrLayoutAlignmentAptitude new.
 	self
 		addChangeProperty: #(widget layout)

@@ -4,5 +4,5 @@ Extension { #name : 'GtPostMortemSessionElement' }
 GtPostMortemSessionElement >> newSummaryView [
 	^ BrEditor new
 		aptitude: BrGlamorousCodeEditorAptitude new + BrShadowAptitude new;
-		background: (Color fromHexString: '#262626').
+		background: ZealDarkMode contentBackground.
 ]

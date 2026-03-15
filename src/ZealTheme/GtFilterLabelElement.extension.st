@@ -12,6 +12,6 @@ GtFilterLabelElement >> initializeStyling [
 	self
 		addAptitude: (BrStyleCommonAptitude new
 				// GtFilterTagLabelId / #label;
-				default: [ :aStyle | aStyle foreground: (Color white alpha: 0.85) ];
+				default: [ :aStyle | aStyle foreground: ZealDarkMode textColor ];
 				focused: [ :aStyle | aStyle foreground: Color white ])
 ]

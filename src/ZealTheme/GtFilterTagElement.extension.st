@@ -8,7 +8,7 @@ GtFilterTagElement >> createEditableLabel [
 		fitContent;
 		id: GtFilterTagEditorId;
 		aptitude: BrGlamorousRegularEditorAptitude new glamorousRegularFont glamorousCodeSmallSize;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
 		margin: (BlInsets top: 2 left: 0 bottom: 2 right: 3);
 		padding: (BlInsets top: 1 left: 2 bottom: 1 right: 2);
@@ -60,11 +60,11 @@ GtFilterTagElement >> initialize [
 	}.
 	self addAptitude: (BrStyleCommonAptitude new
 		// #label;
-		default: [ :aStyle | aStyle foreground: (Color white alpha: 0.85) ];
+		default: [ :aStyle | aStyle foreground: ZealDarkMode textColor ];
 		focused: [ :aStyle | aStyle foreground: Color white ]).
 	self addAptitude: (BrStyleCommonAptitude new
 		// #icon;
-		default: [ :aStyle | aStyle background: (Color white alpha: 0.85) ];
+		default: [ :aStyle | aStyle background: ZealDarkMode textColor ];
 		focused: [ :aStyle | aStyle background: Color white ]).
 	self when: BlClickEvent do: [ :anEvent |
 		anEvent consumed: true.

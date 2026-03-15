@@ -10,7 +10,7 @@ GtPhlowProtoView >> gtLiveFor: aView [
 			| aContainer |
 			aContainer := BlElement new
 				margin: (BlInsets all: 20);
-				background: (Color fromHexString: '#262626');
+				background: ZealDarkMode contentBackground;
 				aptitude: BrShadowAptitude;
 				constraintsDo: [ :c | 
 					c horizontal matchParent.

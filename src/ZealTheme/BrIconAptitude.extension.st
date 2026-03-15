@@ -11,6 +11,6 @@ BrIconAptitude >> icon: aStencilOrElement [
 		| c |
 		c := iconElement background paint color.
 		((c respondsTo: #red) and: [c red < 0.5 and: [c green < 0.5 and: [c blue < 0.5 and: [c alpha > 0.5]]]]) ifTrue: [
-			iconElement background: (Color white alpha: 0.85)]].
+			iconElement background: ZealDarkMode textColor]].
 	self updateIcon
 ]

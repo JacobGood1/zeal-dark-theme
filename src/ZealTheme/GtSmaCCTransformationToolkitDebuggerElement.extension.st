@@ -12,7 +12,7 @@ GtSmaCCTransformationToolkitDebuggerElement >> inspectorListElement [
 		title: 'Name';
 		cellStencil:
 				[ (BrLabel new)
-						aptitude: (BrGlamorousLabelAptitude new foreground: (Color white alpha: 0.85));
+						aptitude: (BrGlamorousLabelAptitude new foreground: ZealDarkMode textColor);
 						hMatchParent;
 						vFitContent;
 						margin:

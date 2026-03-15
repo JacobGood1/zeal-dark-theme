@@ -46,7 +46,7 @@ BlElement >> gtPreviewFor: aView [
 				padding: (BlInsets top: 10 left: 10 bottom: 5 right: 10);
 				addChild: (BrFrame new
 					matchParent;
-					background: (Color fromHexString: '#262626');
+					background: ZealDarkMode contentBackground;
 					addAptitude: BrShadowAptitude;
 					padding: (BlInsets all: 10);
 					margin: (BlInsets top: 5 left: 10 bottom: 5 right: 10);

@@ -4,7 +4,7 @@ Extension { #name : 'GtPharoClassExpanderAttribute' }
 GtPharoClassExpanderAttribute >> buildBehaviorCoder [
 	| editorElement |
 	editorElement := GtCoderElement forClass: classToExpand.
-	editorElement background: (Color fromHexString: '#262626').
+	editorElement background: ZealDarkMode contentBackground.
 	editorElement
 		aptitude: BrShadowAptitude
 				+ (BrGlamorousWithVerticalResizerAptitude new

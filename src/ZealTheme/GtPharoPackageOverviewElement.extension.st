@@ -6,7 +6,7 @@ GtPharoPackageOverviewElement >> createClassTypesList [
 		hMatchParent;
 		vFitContentLimited;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 10);
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		padding: (BlInsets top: 0 bottom: 10 left: 10 right: 10);
 		headerElementStencil: [ BrLabel new
 			margin: (BlInsets top: 10);
@@ -21,7 +21,7 @@ GtPharoPackageOverviewElement >> createRoundedPaneElement [
 		vFitContent;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 10);
 		addAptitude: BrShadowAptitude;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		padding: (BlInsets all: 10);
 		margin: (BlInsets all: 5)
 ]
@@ -30,7 +30,7 @@ GtPharoPackageOverviewElement >> createRoundedPaneElement [
 GtPharoPackageOverviewElement >> initialize [
 	super initialize.
 	
-	self background: (Color fromHexString: '#262626').
+	self background: ZealDarkMode contentBackground.
 	self matchParent.
 	self padding: (BlInsets top: 20 bottom: 20 left: 20 right: 20).
 	

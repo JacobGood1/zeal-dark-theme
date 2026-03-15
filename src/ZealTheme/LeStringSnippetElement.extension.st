@@ -14,7 +14,7 @@ LeStringSnippetElement >> initializeIndicatorElement [
 			objectActOn: [ :anActOnEvent :aParserClass :aButton | self onParserSelected: aParserClass actOnEvent: anActOnEvent ].
 	indicatorElement := indicatorStencil asElement.
 	indicatorElement
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		margin: (BlInsets top: 5 right: 5);
 		constraintsDo: [ :c | 
 			c frame horizontal alignRight.

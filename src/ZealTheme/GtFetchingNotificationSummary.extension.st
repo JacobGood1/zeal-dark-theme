@@ -11,7 +11,7 @@ GtFetchingNotificationSummary >> initialize [
 	self border: (BlBorder paint: Color orange width: 2).
 	self geometry: (BlRoundedRectangleGeometry cornerRadius: 4).
 	self padding: (BlInsets left: 5 right: 5).
-	self background: (Color fromHexString: '#262626').
+	self background: ZealDarkMode contentBackground.
 	self
 		addChild: (executedLabel := BrLabel new
 					aptitude: BrGlamorousLabelAptitude;

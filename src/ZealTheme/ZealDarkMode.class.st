@@ -10,26 +10,26 @@ ZealDarkMode class >> activate [
 	"Override BrGlamorousColors class variables with dark values then patch aptitudes"
 	
 	"Borders"
-	self set: #LightBorderColor to: (Color fromHexString: '#444444').
-	self set: #DarkBorderColor to: (Color fromHexString: '#666666').
-	self set: #PrimaryBorderColor to: (Color fromHexString: '#2196F3').
-	self set: #ActiveColor to: (Color fromHexString: '#42A5F5').
+	self set: #LightBorderColor to: self lightBorderColor.
+	self set: #DarkBorderColor to: self darkBorderColor.
+	self set: #PrimaryBorderColor to: self primaryAccentColor.
+	self set: #ActiveColor to: self activeAccentColor.
 	
 	"Button borders"
-	self set: #ButtonBorderColor to: (Color fromHexString: '#555555').
-	self set: #HoveredButtonBorderColor to: (Color fromHexString: '#2196F3').
-	self set: #PressedButtonBorderColor to: (Color fromHexString: '#42A5F5').
-	self set: #DisabledButtonBorderColor to: (Color fromHexString: '#3A3A3A').
+	self set: #ButtonBorderColor to: self buttonBorderColor.
+	self set: #HoveredButtonBorderColor to: self primaryAccentColor.
+	self set: #PressedButtonBorderColor to: self activeAccentColor.
+	self set: #DisabledButtonBorderColor to: self fadedBackground.
 	
 	"Status borders"
-	self set: #SuccessBorderColor to: (Color fromHexString: '#4CAF50').
-	self set: #ErrorBorderColor to: (Color fromHexString: '#F44336').
-	self set: #FailureBorderColor to: (Color fromHexString: '#FF9800').
+	self set: #SuccessBorderColor to: self successColor.
+	self set: #ErrorBorderColor to: self errorColor.
+	self set: #FailureBorderColor to: self warningColor.
 	
 	"Button backgrounds"
-	self set: #ButtonBackgroundColor to: (Color fromHexString: '#2D2D2D').
-	self set: #DisabledButtonBackgroundColor to: (Color fromHexString: '#252525').
-	self set: #FadedBackgroundColor to: (Color fromHexString: '#3A3A3A').
+	self set: #ButtonBackgroundColor to: self buttonBackground.
+	self set: #DisabledButtonBackgroundColor to: self contentBackground darker.
+	self set: #FadedBackgroundColor to: self fadedBackground.
 	
 	"Status backgrounds"
 	self set: #PaleErrorBackgroundColor to: (Color fromHexString: '#3B1515').
@@ -38,44 +38,44 @@ ZealDarkMode class >> activate [
 	self set: #ErrorBackgroundColor to: (Color fromHexString: '#5B1A1A').
 	self set: #SuccessBackgroundColor to: (Color fromHexString: '#2E5B2E').
 	self set: #FailureBackgroundColor to: (Color fromHexString: '#5B3D00').
-	self set: #NeutralBackgroundColor to: (Color fromHexString: '#2A2A2A').
+	self set: #NeutralBackgroundColor to: self headerBackground.
 	self set: #NewsBackgroundColor to: (Color fromHexString: '#332200').
 	
 	"Button text"
-	self set: #ButtonTextColor to: (Color white alpha: 0.75).
-	self set: #HoveredButtonTextColor to: (Color fromHexString: '#2196F3').
-	self set: #PressedButtonTextColor to: (Color fromHexString: '#42A5F5').
-	self set: #DisabledButtonTextColor to: (Color white alpha: 0.25).
-	self set: #FadedTextColor to: (Color fromHexString: '#9E9E9E').
+	self set: #ButtonTextColor to: (self textColor alpha: 0.75).
+	self set: #HoveredButtonTextColor to: self primaryAccentColor.
+	self set: #PressedButtonTextColor to: self activeAccentColor.
+	self set: #DisabledButtonTextColor to: self disabledTextColor.
+	self set: #FadedTextColor to: self secondaryTextColor.
 	
 	"Backgrounds"
-	self set: #BackdropColor to: (Color fromHexString: '#1E1E1E').
-	self set: #ShadowColor to: (Color black alpha: 0.5).
+	self set: #BackdropColor to: self backdropBackground.
+	self set: #ShadowColor to: self shadowColor.
 	
 	"Header"
-	self set: #HeaderBackgroundColor to: (Color fromHexString: '#2A2A2A').
-	self set: #SecondaryHeaderBackgroundColor to: (Color fromHexString: '#333333').
-	self set: #HeaderTextColor to: (Color white alpha: 0.85).
-	self set: #DisabledHeaderTextColor to: (Color white alpha: 0.25).
+	self set: #HeaderBackgroundColor to: self headerBackground.
+	self set: #SecondaryHeaderBackgroundColor to: self secondaryHeaderBackground.
+	self set: #HeaderTextColor to: self textColor.
+	self set: #DisabledHeaderTextColor to: self disabledTextColor.
 	
 	"Editor"
-	self set: #EditorBorderColor to: (Color fromHexString: '#444444').
-	self set: #FocusedEditorBorderColor to: (Color fromHexString: '#2196F3').
+	self set: #EditorBorderColor to: self lightBorderColor.
+	self set: #FocusedEditorBorderColor to: self primaryAccentColor.
 	
 	"List items"
 	self set: #HoveredListItemBackgroundColor to: (Color white alpha: 0.08).
-	self set: #SelectedListItemBackgroundColor to: ((Color fromHexString: '#2196F3') alpha: 0.25).
+	self set: #SelectedListItemBackgroundColor to: (self primaryAccentColor alpha: 0.25).
 	self set: #PressedListItemBackgroundColor to: (Color white alpha: 0.15).
 	self set: #DeselectedListItemBackgroundColor to: Color transparent.
 	
 	"Text and misc"
-	self set: #TextHighlightColor to: ((Color fromHexString: '#FF9800') alpha: 0.3).
-	self set: #TextMarkupColor to: (Color fromHexString: '#9E9E9E').
-	self set: #DebuggerTextHighlightColor to: ((Color fromHexString: '#F44336') alpha: 0.2).
-	self set: #FormLabelTextColor to: (Color white alpha: 0.65).
-	self set: #LinkColor to: (Color fromHexString: '#2196F3').
-	self set: #LinkWithErrorColor to: (Color fromHexString: '#F44336').
-	self set: #ExpandCollapseTriangleBackgroundColor to: (Color fromHexString: '#9E9E9E').
+	self set: #TextHighlightColor to: (self warningColor alpha: 0.3).
+	self set: #TextMarkupColor to: self secondaryTextColor.
+	self set: #DebuggerTextHighlightColor to: (self errorColor alpha: 0.2).
+	self set: #FormLabelTextColor to: (self textColor alpha: 0.65).
+	self set: #LinkColor to: self primaryAccentColor.
+	self set: #LinkWithErrorColor to: self errorColor.
+	self set: #ExpandCollapseTriangleBackgroundColor to: self secondaryTextColor.
 	
 	"Activate theme object and fix shadow"
 	BlTheme default: BrGlamorousDarkTheme new.
@@ -96,6 +96,48 @@ ZealDarkMode class >> activate [
 	^ 'Dark mode activated'
 ]
 
+{ #category : 'colors' }
+ZealDarkMode class >> activeAccentColor [
+	"Active/pressed accent"
+	^ Color fromHexString: '#42A5F5'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> appBackground [
+	"Darkest background - root space, window background"
+	^ Color fromHexString: '#171B22'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> backdropBackground [
+	"Backdrop behind content - slightly lighter than app background"
+	^ Color fromHexString: '#1B1F26'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> buttonBackground [
+	"Default button background"
+	^ Color fromHexString: '#2A2F37'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> buttonBorderColor [
+	"Button borders"
+	^ Color fromHexString: '#525764'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> contentBackground [
+	"Main content areas - editors, panels, cards"
+	^ Color fromHexString: '#232830'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> darkBorderColor [
+	"Prominent borders"
+	^ Color fromHexString: '#636876'
+]
+
 { #category : 'actions' }
 ZealDarkMode class >> deactivate [
 	self stopWatcher.
@@ -104,27 +146,63 @@ ZealDarkMode class >> deactivate [
 	^ 'Light mode restored'
 ]
 
+{ #category : 'colors' }
+ZealDarkMode class >> disabledTextColor [
+	"Disabled text"
+	^ Color white alpha: 0.25
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> errorColor [
+	"Error status"
+	^ Color fromHexString: '#F44336'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> fadedBackground [
+	"Faded/disabled background, hover states"
+	^ Color fromHexString: '#373C46'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> headerBackground [
+	"Headers, toolbars"
+	^ Color fromHexString: '#272C34'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> iconColor [
+	"Icon fill/stroke color"
+	^ Color white alpha: 0.85
+]
+
 { #category : 'initialization' }
 ZealDarkMode class >> initialize [
 	"Called automatically when the package is loaded"
 	self activate
 ]
 
-{ #category : 'patching' }
+{ #category : 'colors' }
+ZealDarkMode class >> lightBorderColor [
+	"Subtle borders, dividers"
+	^ Color fromHexString: '#414652'
+]
+
+{ #category : 'private' }
 ZealDarkMode class >> patchAptitudes [
 	"Patch core aptitudes that hardcode Color white to use theme colors instead"
 	
 	"Fix BlSpace default root background"
 	BlSpace compile: 'defaultRootBackground
 	^ (BlTheme default class name asString includesSubstring: ''Dark'')
-		ifTrue: [ Color fromHexString: ''#1A1A1A'' ]
+		ifTrue: [ Color fromHexString: ''#171B22'' ]
 		ifFalse: [ Color white ]' classified: 'initialization'.
 	
 	"Fix BrGlamorousDefaultDarkTheme shadow (was green)"
 	BrGlamorousDefaultDarkTheme compile: 'initializeConstants
 	super initializeConstants.
 	self constantAt: #defaultShadowColor put: (Color black alpha: 0.5).
-	self constantAt: #primaryBorderColor put: (Color fromHexString: ''#555555'')' classified: 'initialization'.
+	self constantAt: #primaryBorderColor put: (Color fromHexString: ''#525764'')' classified: 'initialization'.
 	
 	"Fix editor spacing background"
 	BrGlamorousEditorSpacingAptitude compile: 'initialize
@@ -236,17 +314,23 @@ ZealDarkMode class >> patchAptitudes [
 				pressed: [ :aStyle | aStyle background: self theme item pressedColor ])' classified: 'initialization'
 ]
 
+{ #category : 'colors' }
+ZealDarkMode class >> primaryAccentColor [
+	"Primary accent - links, focus, selection"
+	^ Color fromHexString: '#2196F3'
+]
+
 { #category : 'as yet unclassified' }
 ZealDarkMode class >> repaintAll [
 	"Force dark backgrounds on all white/light elements in all spaces"
 	| darkContent darkBg iconColor lightText count |
-	darkContent := Color fromHexString: '#262626'.
-	darkBg := Color fromHexString: '#333333'.
+	darkContent := ZealDarkMode contentBackground.
+	darkBg := ZealDarkMode secondaryHeaderBackground.
 	iconColor := Color white alpha: 0.85.
 	lightText := Color white alpha: 0.85.
 	count := 0.
 	BlSpace allSubInstances do: [ :space |
-		space root background: (Color fromHexString: '#1A1A1A').
+		space root background: ZealDarkMode appBackground.
 		space root withAllChildrenBreadthFirstDo: [ :el |
 			| bg |
 			bg := el background.
@@ -295,7 +379,43 @@ ZealDarkMode class >> repaintAll [
 	^ count
 ]
 
+{ #category : 'colors' }
+ZealDarkMode class >> secondaryHeaderBackground [
+	"Secondary headers, sidebars"
+	^ Color fromHexString: '#30353E'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> secondaryTextColor [
+	"Secondary/muted text"
+	^ Color fromHexString: '#9E9E9E'
+]
+
 { #category : 'private' }
 ZealDarkMode class >> set: aSymbol to: aColor [
 	(BrGlamorousColors classVariableNamed: aSymbol) value: aColor
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> shadowColor [
+	"Shadow color"
+	^ Color black alpha: 0.5
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> successColor [
+	"Success status"
+	^ Color fromHexString: '#4CAF50'
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> textColor [
+	"Primary text color"
+	^ Color white alpha: 0.85
+]
+
+{ #category : 'colors' }
+ZealDarkMode class >> warningColor [
+	"Warning/failure status"
+	^ Color fromHexString: '#FF9800'
 ]

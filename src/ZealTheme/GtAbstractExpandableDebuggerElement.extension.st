@@ -9,7 +9,7 @@ GtAbstractExpandableDebuggerElement >> buildDetailsTabElement [
 	tabGroup := compositeView asElementDo: [ :e | e ].
 	tabGroup
 		matchParent;
-		background: (Color fromHexString: '#262626').
+		background: ZealDarkMode contentBackground.
 	self addDefaultTabsToGroup: tabGroup.
 			
 	^ tabGroup

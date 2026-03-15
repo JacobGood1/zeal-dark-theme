@@ -7,12 +7,12 @@ GtSceneryLePageTitleLabelElement >> initializeLabelAptitude [
 	
 	labelAptitude := BrGlamorousEditableLabelAptitude new
 		glamorousRegularFontAndSize bold
-		defaultBackground: (Color fromHexString: '#262626');
+		defaultBackground: ZealDarkMode contentBackground;
 		yourself.
 	labelAptitude styleLook
 		default: [ :aStyle | 
 			aStyle geometry: (BlRoundedRectangleGeometry cornerRadius: 0).
-			aStyle background: (Color fromHexString: '#262626').
+			aStyle background: ZealDarkMode contentBackground.
 			aStyle border: BlBorder empty ].
 	^ labelAptitude
 ]

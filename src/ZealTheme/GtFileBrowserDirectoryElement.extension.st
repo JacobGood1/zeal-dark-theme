@@ -5,7 +5,7 @@ GtFileBrowserDirectoryElement >> initialize [
 	super initialize.
 	
 	self matchParent.
-	self background: (Color fromHexString: '#262626').
+	self background: ZealDarkMode contentBackground.
 	
 	self padding: (BlInsets all: 10).
 	toolbar := self createFolderToolbar. 

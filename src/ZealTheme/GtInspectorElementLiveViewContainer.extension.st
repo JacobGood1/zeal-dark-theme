@@ -17,7 +17,7 @@ GtInspectorElementLiveViewContainer >> updateAsElementPreviewView [
 	previewContainer := BlElement new
 			aptitude: BrShadowAptitude;
 			layout: BlLinearLayout new;
-			background: (Color fromHexString: '#262626');
+			background: ZealDarkMode contentBackground;
 			constraintsDo: [ :c | 
 				c horizontal matchParent.
 				c vertical matchParent ];

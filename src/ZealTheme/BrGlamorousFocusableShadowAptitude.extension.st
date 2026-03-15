@@ -9,5 +9,5 @@ BrGlamorousFocusableShadowAptitude >> initialize [
 				focused: [ :aStyle | 
 					aStyle
 						do: [ self color: self theme default primaryBorderColor ]
-						after: [ self color: ((Color fromHexString: '#666666') alpha: 0.5) ] ])
+						after: [ self color: (ZealDarkMode darkBorderColor alpha: 0.5) ] ])
 ]

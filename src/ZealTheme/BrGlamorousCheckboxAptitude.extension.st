@@ -22,7 +22,7 @@ BrGlamorousCheckboxAptitude >> initialize [
 				default: [ :aStyle | 
 					aStyle
 						geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
-						background: (Color fromHexString: '#262626');
+						background: ZealDarkMode contentBackground;
 						border: (BlBorder paint: self theme button defaultBorderColor width: 1) ];
 				hovered: [ :aStyle | 
 					aStyle

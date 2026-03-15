@@ -8,7 +8,7 @@ GtPharoMethodCoderTagsElement >> newProtocolEditor [
 			constraintsDo: [ :c | c minWidth: 100 ];
 			aptitude: (BrGlamorousEditableLabelAptitude new
 					glamorousCodeFont;
-					defaultForeground: (Color white alpha: 0.85);
+					defaultForeground: ZealDarkMode textColor;
 					fontSize: 13);
 			padding: (BlInsets all: 4);
 			switchToEditor;

@@ -9,13 +9,13 @@ GtPharoPackageDependencyElement >> initialize [
 		matchParent;
 		cellSpacing: 20;
 		padding: (BlInsets left: 20 right: 20);
-		background: (Color fromHexString: '#262626').
+		background: ZealDarkMode contentBackground.
 	
 	header := BrVerticalPane new
 		fitContent;
 		alignCenter;
 		padding: (BlInsets top: 10 bottom: 10 left: 20 right: 20);
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 10);
 		addAptitude: BrShadowAptitude.
 	self addChild: header
@@ -61,7 +61,7 @@ GtPharoPackageDependencyElement >> packageDependency: anObject [
 				vFitContentLimited;
 				hMatchParent;
 				padding: (BlInsets top: 10 bottom: 10 left: 10 right: 10);
-				background: (Color fromHexString: '#262626');
+				background: ZealDarkMode contentBackground;
 				addAptitude: BrShadowAptitude;
 				geometry: (BlRoundedRectangleGeometry cornerRadius: 10).
 			self addChild: aList ]

@@ -3,7 +3,7 @@ Extension { #name : 'BrGlamorousTextLabelAptitude' }
 { #category : '*ZealTheme' }
 BrGlamorousTextLabelAptitude >> initialize [
 	super initialize.
-	self foreground: (Color white alpha: 0.85).
+	self foreground: ZealDarkMode textColor.
 	self defaultFontName: 'Source Sans Pro'.
 	labelElement addAptitude: (BrSizeAdjustmentAptitude new
 		mini: [ :aStyle | aStyle fontSizeEm: 0.55 ];

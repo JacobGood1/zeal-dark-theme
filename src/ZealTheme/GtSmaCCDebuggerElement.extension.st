@@ -6,7 +6,7 @@ GtSmaCCDebuggerElement >> buildParserActions [
 	stateActionsList 
 		margin: (BlInsets all: 10); 
 		addAptitude: BrShadowAptitude;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new cellSpacing: 10).
 	stateActionsList column
 		title: 'Symbol';
@@ -16,7 +16,7 @@ GtSmaCCDebuggerElement >> buildParserActions [
 			text
 				attributes:
 					(each third
-						ifTrue: [ {(BlTextForegroundAttribute paint: Color black).
+						ifTrue: [ {(BlTextForegroundAttribute paint: ZealDarkMode textColor).
 							BlFontWeightAttribute bold} ]
 						ifFalse: [ {(BlTextForegroundAttribute paint: Color red)} ]).
 			BrLabel new
@@ -31,7 +31,7 @@ GtSmaCCDebuggerElement >> buildParserActions [
 			text
 				attributes:
 					(each third
-						ifTrue: [ {(BlTextForegroundAttribute paint: Color black).
+						ifTrue: [ {(BlTextForegroundAttribute paint: ZealDarkMode textColor).
 							BlFontWeightAttribute bold} ]
 						ifFalse: [ {(BlTextForegroundAttribute paint: Color red)} ]).
 			BrLabel new
@@ -47,7 +47,7 @@ GtSmaCCDebuggerElement >> buildParserStack [
 	parserStackList
 		margin: (BlInsets all: 10);
 		addAptitude: BrShadowAptitude;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new cellSpacing: 10).
 	parserStackList
 		addEventHandler: (GtPhlowListToSelectHandler new transformation: [ :each | each first = '' ifFalse: [ each last ] ]).
@@ -59,7 +59,7 @@ GtSmaCCDebuggerElement >> buildParserStack [
 		stencil:
 				[ :each | 
 					(BrLabel new)
-						aptitude: (BrGlamorousLabelAptitude new foreground: Color black);
+						aptitude: (BrGlamorousLabelAptitude new foreground: ZealDarkMode textColor);
 						text: (each first ifNil: [ '' ]);
 						margin: (BlInsets top: 5 bottom: 5) ].
 	(parserStackList column)
@@ -83,7 +83,7 @@ GtSmaCCDebuggerElement >> buildSource [
 		matchParent;
 		margin: (BlInsets all: 10);
 		addAptitude: BrShadowAptitude;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		padding: (BlInsets all: 10).
 	sourceEditor := editorElement editor.
 	sourceEditor text: text.

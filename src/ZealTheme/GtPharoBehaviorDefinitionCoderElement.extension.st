@@ -4,7 +4,7 @@ Extension { #name : 'GtPharoBehaviorDefinitionCoderElement' }
 GtPharoBehaviorDefinitionCoderElement >> editableLabelLook [
 	^ BrGlamorousEditableLabelAptitude new
 		glamorousCodeFont;
-		defaultForeground: (Color white alpha: 0.85);
+		defaultForeground: ZealDarkMode textColor;
 		fontSize: 10
 ]
 
@@ -13,7 +13,7 @@ GtPharoBehaviorDefinitionCoderElement >> readonlyLabelLook [
 	^ BrGlamorousEditorAptitude new
 		glamorousCodeFont;
 		fontSize: 10;
-		foreground: (Color white alpha: 0.85);
+		foreground: ZealDarkMode textColor;
 		add:
 			(BrStyleCommonAptitude new
 				default: [ :aStyle | 

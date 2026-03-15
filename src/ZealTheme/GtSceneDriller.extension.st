@@ -3,8 +3,8 @@ Extension { #name : 'GtSceneDriller' }
 { #category : '*ZealTheme' }
 GtSceneDriller >> newTreeRowElement [
 	| hoverColor pressedColor |
-	hoverColor := (Color white alpha: 0.85).
-	pressedColor := (Color white alpha: 0.85).
+	hoverColor := ZealDarkMode textColor.
+	pressedColor := ZealDarkMode textColor.
 	^ BrHorizontalPane new
 		hMatchParent;
 		vFitContent;

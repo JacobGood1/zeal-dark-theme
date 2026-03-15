@@ -6,7 +6,7 @@ GtDiagrammerElement >> initializeCanvas [
 	canvasContainer constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
-	canvasContainer background: (Color fromHexString: '#262626').
+	canvasContainer background: ZealDarkMode contentBackground.
 	
 	canvas := BlElement new.
 	canvas constraintsDo: [ :c |

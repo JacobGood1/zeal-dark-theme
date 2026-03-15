@@ -24,7 +24,7 @@ GtPharoProcessCoderElement >> variablesListElement [
 		title: 'Variable';
 		stencil: [ :each | 
 			BrLabel new
-				aptitude: (BrGlamorousLabelAptitude new foreground: (Color white alpha: 0.85));
+				aptitude: (BrGlamorousLabelAptitude new foreground: ZealDarkMode textColor);
 				text: each first asString;
 				hMatchParent;
 				vMatchParent;
@@ -38,7 +38,7 @@ GtPharoProcessCoderElement >> variablesListElement [
 		title: 'Value';
 		stencil: [ :each | 
 			BrLabel new
-				aptitude: (BrGlamorousLabelAptitude new foreground: (Color white alpha: 0.85));
+				aptitude: (BrGlamorousLabelAptitude new foreground: ZealDarkMode textColor);
 				text: (each last printStringLimitedTo: 50);
 				hMatchParent;
 				vMatchParent;

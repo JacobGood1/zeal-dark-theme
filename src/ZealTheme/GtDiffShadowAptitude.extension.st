@@ -5,7 +5,7 @@ GtDiffShadowAptitude >> newShadowLook [
 	^ BrStyleCommonAptitude new
 		default: [ :aStyle |
 			aStyle
-				background: (Color fromHexString: '#262626');
+				background: ZealDarkMode contentBackground;
 				effect: BrGlamorousShadowEffect new ];
 		yourself
 ]

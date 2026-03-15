@@ -4,5 +4,5 @@ Extension { #name : 'BrGlamorousCodeEditorAptitude' }
 BrGlamorousCodeEditorAptitude >> initialize [
 	super initialize.
 	self glamorousCodeDefaultFont.
-	self foreground: (Color white alpha: 0.85)
+	self foreground: ZealDarkMode textColor
 ]

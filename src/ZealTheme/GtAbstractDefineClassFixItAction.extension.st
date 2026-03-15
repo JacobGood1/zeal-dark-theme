@@ -12,7 +12,7 @@ GtAbstractDefineClassFixItAction >> addCreateClassAttributeInEditor: aBrTextEdit
 			ifNotNil: [ :tag | element form packageAndTagName tagName: tag name ].
 		element
 			addAptitude: BrShadowAptitude;
-			background: (Color fromHexString: '#262626');
+			background: ZealDarkMode contentBackground;
 			margin: (BlInsets all: 10);
 			padding: (BlInsets all: 8);
 			constraintsDo: [ :c | 

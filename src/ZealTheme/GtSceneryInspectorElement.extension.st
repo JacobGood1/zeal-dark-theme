@@ -7,7 +7,7 @@ GtSceneryInspectorElement >> initialize [
 	super initialize.
 	self
 		layout: BlFrameLayout new;
-		background: (Color fromHexString: '#262626');
+		background: ZealDarkMode contentBackground;
 		margin: (BlInsets all: 10);
 		addAptitude: self shadowAptitude
 ]

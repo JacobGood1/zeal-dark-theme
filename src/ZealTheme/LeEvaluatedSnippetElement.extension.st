@@ -9,7 +9,7 @@ LeEvaluatedSnippetElement >> newArrowElement [
 		visibility: BlVisibility gone; 
 		geometry: (BlPolygonGeometry vertices: { 0@0 . 24@0 . 12@16 } );
 		margin: (BlInsets top: 13 right: 5 bottom: 0 left: 0);
-		background: (Color fromHexString: '#444444');
+		background: ZealDarkMode lightBorderColor;
 		constraintsDo: [ :c |
 			"Let's put arrow in the middle of its cell"
 			c linear horizontal alignCenter.
