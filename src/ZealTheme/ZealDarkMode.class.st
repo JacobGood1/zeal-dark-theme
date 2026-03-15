@@ -89,6 +89,8 @@ ZealDarkMode class >> activate [
 	"Repaint existing elements"
 	self repaintAll.
 	
+
+	
 	^ 'Dark mode activated'
 ]
 
@@ -288,11 +290,4 @@ ZealDarkMode class >> repaintAll [
 { #category : 'private' }
 ZealDarkMode class >> set: aSymbol to: aColor [
 	(BrGlamorousColors classVariableNamed: aSymbol) value: aColor
-]
-
-{ #category : 'system startup' }
-ZealDarkMode class >> startUp: isImageStarting [
-	isImageStarting ifFalse: [ ^ self ].
-	"Activate dark mode before any GT windows open"
-	self activate
 ]
