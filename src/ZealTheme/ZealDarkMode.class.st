@@ -89,7 +89,9 @@ ZealDarkMode class >> activate [
 	"Repaint existing elements"
 	self repaintAll.
 	
-
+	"Reload GT world with dark theme"
+	GtWorld allInstances do: [:w | [w close] on: Error do: [:e | ]].
+	GtWorld openDefault.
 	
 	^ 'Dark mode activated'
 ]
