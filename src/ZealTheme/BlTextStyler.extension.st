@@ -8,8 +8,6 @@ BlTextStyler >> style: aBlText [
 		during: [
 			| anUnstyledText aStyledText |
 			anUnstyledText := aBlText unstyle.
-			"Set default light foreground for dark mode"
-			anUnstyledText foreground: ZealDarkMode textColor.
 			aStyledText := self privateStyle: anUnstyledText characters.
 			aStyledText text ]
 ]

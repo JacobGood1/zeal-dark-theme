@@ -10,7 +10,7 @@ GtPharoStyler >> parenthesesColors [
 GtPharoStyler >> visitBinaryMessage: aBinaryMessage [
 	aBinaryMessage selectorParts do: [:each |
 		self
-			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#CE93D8') }
+			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#E1BEE7') }
 			from: each startPosition
 			to: each stopPosition].
 	^ super visitBinaryMessage: aBinaryMessage
@@ -20,7 +20,7 @@ GtPharoStyler >> visitBinaryMessage: aBinaryMessage [
 GtPharoStyler >> visitKeywordMessage: aKeywordMessage [
 	aKeywordMessage selectorParts do: [:each |
 		self
-			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#CE93D8') }
+			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#E1BEE7') }
 			from: each startPosition
 			to: each stopPosition].
 	^ super visitKeywordMessage: aKeywordMessage
@@ -30,7 +30,7 @@ GtPharoStyler >> visitKeywordMessage: aKeywordMessage [
 GtPharoStyler >> visitUnaryMessage: anUnaryMessage [
 	anUnaryMessage selectorParts do: [:each |
 		self
-			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#CE93D8') }
+			attributes: { BlTextForegroundAttribute color: (Color fromHexString: '#E1BEE7') }
 			from: each startPosition
 			to: each stopPosition].
 	^ super visitUnaryMessage: anUnaryMessage
